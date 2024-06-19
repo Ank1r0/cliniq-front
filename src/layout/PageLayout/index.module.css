@@ -1,0 +1,21 @@
+.container {
+    min-height: 100vh;
+    background: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* grid-template-rows: 74px calc(100% - 74 * 2px) 74px; */
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.main {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}

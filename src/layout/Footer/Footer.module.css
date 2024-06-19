@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: space-between; /* This pushes the items to the left and right */
+    padding: 10px;
+    height: 74px;
+}
+    
+.footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer h1 {
+  font-size: 1.5rem;
+}
+
+.footer svg {
+  font-size: 2rem;
+}

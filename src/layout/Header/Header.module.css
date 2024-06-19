@@ -1,0 +1,42 @@
+.Header {
+    /* display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 74px; */
+    background: "#8DD7A2";
+}
+
+/* .Header Nav {
+    height: 74px;
+    justify-content: right;
+}
+    
+.Header {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.Header h1 {
+  font-size: 1.5rem;
+}
+
+.Header svg {
+  font-size: 2rem;
+}
+
+.Footer {
+  padding: 0.75rem;
+  display: grid;
+  place-content: left;
+} */
+
+.link, .link:hover, .link:visited, .link:active, .link:focus {
+    text-decoration: none;
+    color: #cfc;
+    text-transform: capitalize;
+}

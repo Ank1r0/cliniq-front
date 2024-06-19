@@ -1,0 +1,29 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Artur",
+      "surname": "Becker",
+      "datetime": "July 01, 2011 11:17:36 AM",
+      "login": "login1",
+      "pass": "pass1"
+    },
+    {
+      "id": 2,
+      "name": "Dallas",
+      "surname": "Korben",
+      "datetime": "July 10, 2022 11:17:36 AM",
+      "login": "login2",
+      "pass": "pass2"
+    },
+    {
+      "id": 3,
+      "name": "Illia",
+      "surname": "Volch",
+      "datetime": "July 23, 2019 11:17:36 AM",
+      "login": "login3",
+      "pass": "pass4"
+    }
+    
+  ]
+}
