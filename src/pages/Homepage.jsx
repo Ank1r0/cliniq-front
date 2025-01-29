@@ -6,19 +6,22 @@ import { useNavigate } from 'react-router-dom';
 export const Homepage = () => {
     const { userLogin, decodedToken } = useIsAuthHook();
     const [currentUser, setCurrentUser] = useState(null);
-
     const navigate = useNavigate();
 
     const fetchCurrentUser = async () => {
         if (!userLogin) {
             return;
         }
-        let response = await fetch(
-            `http://localhost:9090/api/user/getUserByLogin/${userLogin}`
-        );
-        response = await response.json();
-        console.log('response: ', response);
-        setCurrentUser(response);
+        try {
+            let response = await fetch(
+                `http://localhost:9090/api/user/getUserByLogin/${userLogin}`
+            );
+            response = await response.json();
+            console.log('response: ', response);
+            setCurrentUser(response);
+        } catch (error) {
+            console.error('Error fetching current user:', error);
+        }
     };
 
     useEffect(() => {
@@ -32,14 +35,13 @@ export const Homepage = () => {
             decodedToken?.exp &&
             decodedToken.exp * 1000 < new Date().getTime()
         ) {
-            // множимо на 1000, тому що перевірка в секундах, а не в мілісекундах
+            // Logout if token expired
             localStorage.removeItem('token');
             navigate('/');
+        } else if (currentUser?.role === 'Admin') {
+            navigate('/adminpanel');
         }
-        if (userLogin?.length && fetchCurrentUser) {
-            fetchCurrentUser();
-        }
-    }, [userLogin]);
+    }, [userLogin, decodedToken, currentUser]);
 
     return (
         <PageLayout>

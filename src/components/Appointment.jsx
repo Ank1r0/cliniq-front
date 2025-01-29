@@ -233,7 +233,7 @@ const Appointment = () => {
                     </div>
                     <br></br>
 
-                    <h3>List of doctors:</h3>
+                    <h3>List of attendees:</h3>
                     {appData != null
                         ? appData.assignedUsers.map((user) => (
                               <Box

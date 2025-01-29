@@ -41,7 +41,10 @@ export default function () {
             localStorage.setItem('token', data.token);
             setMessage('Login is true');
             if(userLogin?.length) fetchCurrentUser();
+            
+           
             Navigate('/');
+            
         }
     };
 

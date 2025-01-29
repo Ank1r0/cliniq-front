@@ -13,7 +13,7 @@ import AdminPanel from './pages/AdminPanel';
 import Register from './pages/Register/Register';
 import About from './pages/About';
 import Missing from './pages/Missing';
-
+import Users from './pages/Users';
 import Records1 from './pages/MedicalRecords/Records1';
 import Records2 from './pages/MedicalRecords/Records2';
 import Records3 from './pages/MedicalRecords/Records3';
@@ -69,6 +69,7 @@ function App() {
                         />
                         <Route path="/settings" element={<Settings />} />
                         <Route path="/adminpanel" element={<AdminPanel />} />
+                        <Route path="/adminpanel/users" element={<Users />} />
                         <Route path="/register" element={<Register />} />
                         <Route path="/about" element={<About />} />
                         <Route

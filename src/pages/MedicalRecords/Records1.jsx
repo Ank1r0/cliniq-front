@@ -36,10 +36,23 @@ const Records1 = () => {
 
     return (
         <PageLayout>
-            {appData != null ? (
-                <TextField value={appData.aboutAppo} />
+            {appData?.aboutAppo ? (
+                <div style={{ padding: '20px', maxWidth: '800px', margin: 'auto' }}>
+                    <TextField
+                        value={appData.aboutAppo}
+                        multiline
+                        rows={10} // Adjust the number of rows for large text
+                        fullWidth
+                        variant="outlined" // Choose a variant to make it visually pleasing
+                        InputProps={{
+                            style: { fontSize: '16px', lineHeight: '1.6' }, // Adjust typography for readability
+                        }}
+                    />
+                </div>
             ) : (
-                'No appointments and medical records'
+                <div style={{ textAlign: 'center', padding: '20px', fontSize: '18px' }}>
+                    No appointments and medical records
+                </div>
             )}
         </PageLayout>
     );
